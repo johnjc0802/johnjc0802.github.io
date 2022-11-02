@@ -12,7 +12,7 @@
   <title>Recipe Form Page</title>
 </head>
 
-<body onload='document.getElementById("instruction_1").value = "1. "'>
+<body id="form" onload='document.getElementById("instruction_1").value = "1. "'>
 
   <div id="navbar-header">
   <!-- Header here -->
@@ -50,7 +50,7 @@
         <input type="text" placeholder="Image URL" class="form-control m-0" id="recipeImageUrl" 
           onchange="showImage(), hideBG('recipeImageUrl')" onfocus="setFocus('recipeImageUrl')">
       </div>
-        </form>
+        <!--</form>-->
     </div>
   </div>
 
@@ -146,11 +146,12 @@
           </ul>
           <button id="instButton" class="btn btn-primary" type="button" onclick="addInstruction()" 
             onfocus='this.style.background="#dc3545"' onblur='this.style.background="#0d6efd"'>Add Another Instruction</button>
-          <button class="btn btn-primary" type="button" onclick="saveForm()">Save Recipe</button></p>
+          <button id="formButton" class="btn btn-primary" type="submit" onclick="saveForm()">Save Recipe</button></p>
         </td>
         <td></td>    
       </tr>
     </table>
+  </form>
 
     <div id="page-footer">
       <!-- Footer here -->
